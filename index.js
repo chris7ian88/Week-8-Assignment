@@ -84,19 +84,11 @@ class Menu {
                 this.music.splice(index, 1);
             }
     }
-// need help adding index numbers
+
     displaySongs () {
         let songName = "";
-        for (let i = 0; i < this.music.length; i++) {
-            // for (let i = 0; i < this.music.length; i++) {
-            //     music[i].row_number = i
-            // }
-            // songName += i + ") " + this.music[i].name + "-" + this.music[i].artist "\n";
-            // items.forEach((i) => (item.i = i++))
-            // $.this.music.map((elem, elemIndex) => elem.extend({index: elemIndex})) +
-            songName += `${this.music[i].name}, performed by ${this.music[i].artist}. \n`;
-        //     this.music[i].row_number = i + songName += `${this.music[i].name}, performed by ${this.music[i].artist}. \n`;
-        // }
+        for (let i = 1; i < this.music.length; i++) {
+            songName += `[${i}] ${this.music[i].name}, performed by ${this.music[i].artist}. \n`;
         }
         alert(songName)
     }
